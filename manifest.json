@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Dollar to NOK Converter",
+  "version": "1.0",
+  "description": "Replace dollar amounts with NOK.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  }
+}
